@@ -1,0 +1,123 @@
+/* Fondo con imagen */
+body {
+    background: url('banners-website-2.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+/* Contenedor dividido en dos secciones */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    height: 60vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Sección Izquierda (Información) */
+.info-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(3, 3, 3);
+    text-align: left;
+}
+
+.info-section h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Sección Derecha (Login) */
+.login-box {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para el formulario */
+h2 {
+    color: rgb(6, 6, 6);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    border: none;
+    color: rgb(11, 11, 11);
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Enlaces */
+.forgot-password, .signup-link {
+    color: rgb(1, 1, 1);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover, .signup-link:hover {
+    text-decoration: underline;
+}
+
+/* Texto de registro */
+.signup-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .info-section, .login-box {
+        flex: none;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+}
